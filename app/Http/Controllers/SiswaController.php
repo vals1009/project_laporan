@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Laporan;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
-class LaporanController extends Controller
+class SiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Laporan::all(); 
-        return view('back.laporan.index', compact('data'));
+        //
     }
 
     /**
@@ -35,7 +34,7 @@ class LaporanController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Siswa $siswa)
     {
         //
     }
@@ -43,7 +42,7 @@ class LaporanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Siswa $siswa)
     {
         //
     }
@@ -51,7 +50,7 @@ class LaporanController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Siswa $siswa)
     {
         //
     }
@@ -59,7 +58,7 @@ class LaporanController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Siswa $siswa)
     {
         //
     }

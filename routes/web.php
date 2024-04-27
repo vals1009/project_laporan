@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('back', LaporanController::class);
+Route::get('/admin', function () {
+    return view('back. admin.index');
+});
+
+Route::resource('/laporan', LaporanController::class);
