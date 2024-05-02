@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laporan;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class LaporanController extends Controller
@@ -12,8 +13,8 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        $data = Laporan::all(); 
-        return view('back.laporan.index', compact('data'));
+        $laporan = Laporan::all();
+        return view('laporan.index', compact('laporan'));
     }
 
     /**
@@ -21,7 +22,8 @@ class LaporanController extends Controller
      */
     public function create()
     {
-        //
+        $siswa = Siswa::with('jurusan')->get();
+        return view('laporan.create', compact('siswa'));
     }
 
     /**
@@ -29,7 +31,17 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $request->validate([
+        //     'siswa_id' => 'required|exists:siswas,id',
+        //     'title' => 'required|max:100',
+        //     'description' => 'nullable',
+        //     'file_path' => 'required',
+        // ]);
+
+        Laporan::create($request->all());
+
+        return redirect()->route('laporan.index')
+            ->with('success', 'Laporan berhasil ditambahkan.');
     }
 
     /**
@@ -37,7 +49,8 @@ class LaporanController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // $laporan = Laporan::findOrFail($id);
+        // return view('laporan.show', compact('laporan'));
     }
 
     /**
@@ -45,7 +58,9 @@ class LaporanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $siswa = Siswa::all();
+        $laporan = Laporan::findOrFail($id);
+        return view('laporan.edit', compact('laporan', 'siswa'));
     }
 
     /**
@@ -53,7 +68,18 @@ class LaporanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // $request->validate([
+        //     'siswa_id' => 'required|exists:siswas,id',
+        //     'title' => 'required|max:100',
+        //     'description' => 'nullable',
+        //     'file_path' => 'required',
+        // ]);
+
+        $laporan = Laporan::findOrFail($id);
+        $laporan->update($request->all());
+
+        return redirect()->route('laporan.index')
+            ->with('success', 'Laporan berhasil diperbarui.');
     }
 
     /**
@@ -61,6 +87,10 @@ class LaporanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $laporan = Laporan::findOrFail($id);
+        $laporan->delete();
+
+        return redirect()->route('laporan.index')
+            ->with('success', 'Laporan berhasil dihapus.');
     }
 }
