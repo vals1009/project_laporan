@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('siswa_id');
             $table->string('title',100);
             $table->text('description')->nullable();
-            $table->string('file_path');
+            // $table->string('file_path');
             $table->timestamps();
         });
 

@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Jurusan extends Model
 {
     protected $table = 'jurusan';
+    protected $fillable = ['nama_jurusan', 'singkatan'];
 
-    public function jurusan()
+    public function siswa()
     {
-        return $this->belongsTo(Jurusan::class);
+        return $this->hasMany(Siswa::class);
     }
 }
