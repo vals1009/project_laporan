@@ -45,3 +45,6 @@ Route::get('/homepage', function () {
 Route::get('/login', function () {
     return view('login.index');
 });
+Route::get('/register', function () {
+    return view('login.register');
+});
