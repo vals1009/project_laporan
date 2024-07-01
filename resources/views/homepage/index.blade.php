@@ -25,13 +25,6 @@
                 <li class="nav-item"><a class="nav-link" href="">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                        <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
-                        <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                         <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
@@ -52,7 +45,7 @@
                                 <p class="lead fw-normal text-white-50 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit!</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                     <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
-                                    <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
+                                    <a class="btn btn-outline-light btn-lg px-4">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -62,54 +55,59 @@
             </header>
             <!-- Features section-->
             <section class="py-5" id="features">
-              <div class="container px-5 my-5">
-                  <div class="row gx-5 align-items-center">
-                      <div class="col-lg-3 mb-4">
-                          <h2 class="fw-bolder mb-0">A better way to start building.</h2>
-                      </div>
-                      <div class="col-lg-9">
-                          <div class="row gx-5">
-                              <div class="col-md-6 col-lg-3 mb-5">
-                                  <div class="card h-100 border-0 shadow">
-                                      <img src="{{ asset('img/pp3.jpg') }}" class="card-img-top rounded img-fluid" alt="...">
-                                      <div class="card-body">
-                                          <h5 class="card-title fw-bold">Featured title</h5>
-                                          <p class="card-text">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-6 col-lg-3 mb-5">
-                                  <div class="card h-100 border-0 shadow">
-                                      <img src="{{ asset('img/pp45.png') }}" class="card-img-top rounded img-fluid" alt="...">
-                                      <div class="card-body">
-                                          <h5 class="card-title fw-bold">Featured title</h5>
-                                          <p class="card-text">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-6 col-lg-3 mb-5">
-                                  <div class="card h-100 border-0 shadow">
-                                      <img src="{{ asset('img/pp45.png') }}" class="card-img-top rounded img-fluid" alt="...">
-                                      <div class="card-body">
-                                          <h5 class="card-title fw-bold">Featured title</h5>
-                                          <p class="card-text">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-6 col-lg-3 mb-5">
-                                  <div class="card h-100 border-0 shadow">
-                                      <img src="{{ asset('img/pp3.jpg') }}" class="card-img-top rounded img-fluid" alt="...">
-                                      <div class="card-body">
-                                          <h5 class="card-title fw-bold">Featured title</h5>
-                                          <p class="card-text">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-3 mb-4">
+                            <h2 class="fw-bolder mb-0">Jurusan anda:</h2>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row gx-5">
+                                <div class="col-md-6 col-lg-3 mb-5">
+                                    <div class="card h-100 border-0 shadow">
+                                        <img src="{{ asset('img/TKJ.png') }}" class="card-img-top rounded img-fluid" alt="...">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title fw-bold">TKJ</h5>
+                                            <p class="card-text">Teknik Komputer dan Jaringan.</p>
+                                            <a href="#" class="btn btn-primary mt-4">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 mb-5">
+                                    <div class="card h-100 border-0 shadow">
+                                        <img src="{{ asset('img/BDP.png') }}" class="card-img-top rounded img-fluid" alt="...">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title fw-bold">BDP</h5>
+                                            <p class="card-text">Bisnis Daring dan Pemasaran.</p>
+                                            <a href="#" class="btn btn-primary mt-2">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 mb-5">
+                                    <div class="card h-100 border-0 shadow">
+                                        <img src="{{ asset('img/OTK.png') }}" class="card-img-top rounded img-fluid" alt="...">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title fw-bold">OTK</h5>
+                                            <p class="card-text">Otomatisasi dan Tata Kelola Perkantoran.</p>
+                                            <a href="#" class="btn btn-primary mt-4">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 mb-5">
+                                    <div class="card h-100 border-0 shadow">
+                                        <img src="{{ asset('img/TSM.png') }}" class="card-img-top rounded img-fluid" alt="...">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title fw-bold">TSM</h5>
+                                            <p class="card-text">Teknik Sepeda Motor.</p>
+                                            <a href="#" class="btn btn-primary mt-4">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
           
           
           
