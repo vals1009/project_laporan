@@ -41,6 +41,27 @@ Route::resource('siswa', SiswaController::class);
 Route::get('/homepage', function () {
     return view('homepage.index');
 });
+
+// Rute untuk halaman Jurusan TKJ
+Route::get('/laporan_BDP', function () {
+    return view('homepage.laporan_BDP');
+});
+
+// Rute untuk halaman Jurusan BDP
+Route::get('/laporan_OTKP', function () {
+    return view('homepage.laporan_OTKP');
+});
+
+// Rute untuk halaman Jurusan OTKP
+Route::get('/laporan_TSM', function () {
+    return view('homepage.laporan_TSM');
+});
+
+// Rute untuk halaman Jurusan TSM
+Route::get('/laporan_TKJ', function () {
+    return view('homepage.laporan_TKJ');
+});
+
 //Route untuk halaman home-page
 Route::get('/login', function () {
     return view('login.index');
