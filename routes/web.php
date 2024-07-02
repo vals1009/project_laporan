@@ -66,3 +66,6 @@ Route::get('/laporan_TKJ', function () {
 Route::get('/login', function () {
     return view('login.index');
 });
+Route::get('/register', function () {
+    return view('login.register');
+});
