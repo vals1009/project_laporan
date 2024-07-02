@@ -68,7 +68,7 @@
                                         <div class="card-body text-center">
                                             <h5 class="card-title fw-bold">TKJ</h5>
                                             <p class="card-text">Teknik Komputer dan Jaringan.</p>
-                                            <a href="#" class="btn btn-primary mt-4">Learn More</a>
+                                            <a href="{{ url('/laporan_TKJ') }}" class="btn btn-primary mt-4">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
                                         <div class="card-body text-center">
                                             <h5 class="card-title fw-bold">BDP</h5>
                                             <p class="card-text">Bisnis Daring dan Pemasaran.</p>
-                                            <a href="#" class="btn btn-primary mt-2">Learn More</a>
+                                            <a href="{{ url('/laporan_BDP') }}" class="btn btn-primary mt-4">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                                         <div class="card-body text-center">
                                             <h5 class="card-title fw-bold">OTK</h5>
                                             <p class="card-text">Otomatisasi dan Tata Kelola Perkantoran.</p>
-                                            <a href="#" class="btn btn-primary mt-4">Learn More</a>
+                                            <a href="{{ url('/laporan_OTKP') }}" class="btn btn-primary mt-4">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@
                                         <div class="card-body text-center">
                                             <h5 class="card-title fw-bold">TSM</h5>
                                             <p class="card-text">Teknik Sepeda Motor.</p>
-                                            <a href="#" class="btn btn-primary mt-4">Learn More</a>
+                                            <a href="{{ url('/laporan_TSM') }}" class="btn btn-primary mt-4">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
