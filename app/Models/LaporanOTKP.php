@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Laporan extends Model
+class LaporanOTKP extends Model
 {
-    // protected $fillable = ['title', 'description', 'file_path', 'siswa_id'];
-    protected $fillable = ['title', 'description', 'siswa_id'];
+    use HasFactory;
 
-    protected $table = 'laporan';
+    // protected $fillable = ['title', 'description', 'file_path', 'siswa_id'];
+    protected $fillable = ['title', 'description', 'siswa_id', 'document_pdf', 'document_word'];
+
+    protected $table = 'laporanotkp';
 
     public function siswa()
     {

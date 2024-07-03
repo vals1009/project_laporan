@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('laporan', function (Blueprint $table) {
+        Schema::create('laporanbdp', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('siswa_id');
             $table->string('title',100);
             $table->text('description')->nullable();
-            // $table->string('file_path');
+            $table->string('document_pdf')->nullable();
+            $table->string('document_word')->nullable();
             $table->timestamps();
         });
 
-        Schema::table('laporan', function (Blueprint $table) {
+        Schema::table('laporanbdp', function (Blueprint $table) {
             $table->foreign('siswa_id')->references('id')->on('siswa')
             ->onDelete('cascade')->onUpdate('cascade');
         });
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('laporan');
+        Schema::dropIfExists('laporanbdp');
     }
 };
