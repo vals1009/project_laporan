@@ -15,7 +15,7 @@
         </div>
         <div class="row mt-3">
             <div class="col-md-6">
-                <form action="{{ route('laporan.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('laporanTBSM.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="siswa_id" class="form-label">Siswa</label>
@@ -34,18 +34,21 @@
                         <label for="description" class="form-label">Deskripsi</label>
                         <textarea class="form-control" id="description" name="description"></textarea>
                     </div>
-                    {{-- <div class="mb-3">
-                        <label for="file_path" class="form-label">File</label>
-                        <input type="file" class="form-control" id="file_path" name="file_path">
-                    </div> --}}
+                    <div class="mb-3">
+                        <label for="document_pdf" class="form-label">File PDF</label>
+                        <input type="file" class="form-control" id="document_pdf" name="document_pdf" accept=".pdf">
+                    </div>
+                    <div class="mb-3">
+                        <label for="document_word" class="form-label">File Word</label>
+                        <input type="file" class="form-control" id="document_word" name="document_word" accept=".doc,.docx">
+                    </div>
                     <button type="submit" class="btn btn-primary">Simpan</button>
-                    <a href="{{ route('laporan.index') }}" class="btn btn-secondary">Batal</a>
+                    <a href="{{ route('laporanTBSM.index') }}" class="btn btn-secondary">Batal</a>
                 </form>
             </div>
         </div>
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

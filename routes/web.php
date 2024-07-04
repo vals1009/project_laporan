@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\LaporanBDPController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\LaporanOTKPController;
+use App\Http\Controllers\LaporanTBSMController;
+use App\Http\Controllers\LaporanTKJController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,38 +34,24 @@ Route::get('/', function () {
 // Rute untuk JurusanController
 Route::resource('jurusan', JurusanController::class);
 
-
-// Rute untuk LaporanController
-Route::resource('laporan', LaporanController::class);
-
-
 // Rute untuk SiswaController
 Route::resource('siswa', SiswaController::class);
 
-//Route untuk halaman home-page
-Route::get('/homepage', function () {
-    return view('homepage.index');
-});
+// ROUTE DATA LAPORAN SISWA UNTUK DI BACK-END
+Route::resource('laporanTKJ', LaporanTKJController::class);
+Route::resource('laporanOTKP', LaporanOTKPController::class);
+Route::resource('laporanTBSM', LaporanTBSMController::class);
+Route::resource('laporanBDP', LaporanBDPController::class);
+// ROUTE DATA LAPORAN SISWA UNTUK DI BACK-END
 
-// Rute untuk halaman Jurusan TKJ
-Route::get('/laporan_BDP', function () {
-    return view('homepage.laporan_BDP');
-});
 
-// Rute untuk halaman Jurusan BDP
-Route::get('/laporan_OTKP', function () {
-    return view('homepage.laporan_OTKP');
-});
+// ROUTE DATA LAPORAN SISWA UNTUK DI FRONT-END/HOMEPAGE
+Route::get('/laporan-tkj', [HomePageController::class, 'viewsTKJ'])->name('laporan.tkj');
+Route::get('/laporan-otkp', [HomePageController::class, 'viewsOTKP'])->name('laporan.otkp');
+Route::get('/laporan-tbsm', [HomePageController::class, 'viewsTBSM'])->name('laporan.tbsm');
+Route::get('/laporan-bdp', [HomePageController::class, 'viewsBDP'])->name('laporan.bdp');
 
-// Rute untuk halaman Jurusan OTKP
-Route::get('/laporan_TSM', function () {
-    return view('homepage.laporan_TSM');
-});
 
-// Rute untuk halaman Jurusan TSM
-Route::get('/laporan_TKJ', function () {
-    return view('homepage.laporan_TKJ');
-});
 
 //Route untuk halaman home-page
 Route::get('/login', function () {
